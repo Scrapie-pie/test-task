@@ -1,0 +1,16 @@
+//@import "main";
+@import "_mixins";
+@import "_normalize";
+
+@mixin under-dot($size) {
+  position: relative;
+  $color: get-var(color, blue_light);
+  &::after {
+    content: '';
+    position: absolute;
+    @include create-figure($size, get-var(color, blue_light), $radius: 50%);
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

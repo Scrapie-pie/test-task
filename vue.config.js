@@ -1,8 +1,9 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/test-task/'
-    : '/',
+  // publicPath: process.env.NODE_ENV === 'production'
+  //   ? '/test-task/'
+  //   : '/',
+  publicPath: '',
   transpileDependencies: true,
   chainWebpack: config => {
     config.module.rules.delete("svg");
